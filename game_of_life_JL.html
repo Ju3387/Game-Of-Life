@@ -1,0 +1,93 @@
+<!-- //Game Of Life by JL
+//
+//Regeln:
+//1. Jede Zelle mit weniger als zwei lebenden Nachbarn stirbt (unterbevölkerung).
+//2. Eine lebendige Zelle mit zwei oder drei lebenden Nachbarn lebt weiter.
+//3. Eine lebendige Zelle mit mehr als drei lebenden Nachbarn stirbt (Überbevölkerung).
+//4. Eine tote Zelle mit genau drei lebenden Nachbarn wird lebendig (Reproduktion). -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <p style="font-weight: bolder; font-size: x-large;">Game of Life</p>
+        <style type="text/css">
+            #body {
+                background-color: #f0f0f0;
+                font-family: Arial, sans-serif;
+            }
+            #h1 {
+                color: #000000;
+            }
+        </style>
+        <nav>
+            <ul>
+                <li><a style="font-size: medium;" href="startseite.html">Back</a></li>
+            </ul>
+        </nav>
+    </head>
+
+    <body>
+        <!-- Buttons -->
+        <button id="startButton">Start</button>
+        <button id="stopButton">Stop</button>
+        <button id="continueButton">Continue</button>
+        <button id="resetButton">Reset</button>
+        <button id="clearGridButton">Clear Grid</button>
+        <label for="eingabe">Geben Sie einen Wert für die Wahrscheinlichkeit ein (z.B. 0.22):</label>
+        <input type="number" id="eingabe" name="eingabe" step="0.01" min="0.01" max="1" value="0.33" />
+
+        <div>
+            <!-- Canvas -->
+            <canvas id="golCanvas" width="1087" height="400"></canvas>
+        </div>
+
+        <!-- Labels -->
+        <div>
+            <span style="font-size: large;">Living Cells: <span id="livinglabel">0</span></span>
+            <span style="font-size: large;">Generations: <span id="genlabel">0</span></span>
+        </div>
+
+        <button id="plusButton">+</button>
+        <button id="minusButton">-</button>
+
+        <style type="text/css">
+            #startButton,
+            #stopButton,
+            #resetButton,
+            #continueButton,
+            #clearGridButton {
+                align-items: center;
+                margin-right: 15px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                width: 100px;
+                height: 30px;
+                font-size: 14px;
+            }
+            #startButton {
+                background-color: green;
+                border: black 2px solid;
+            }
+            #stopButton {
+                background-color: red;
+                border: black 2px solid;
+            }
+            #resetButton {
+                background-color: orange;
+                border: black 2px solid;
+            }
+            #continueButton {
+                background-color: blue;
+                border: black 2px solid;
+            }
+            #clearGridButton {
+                background-color: white;
+                border: black 2px solid;
+            }
+            #golCanvas {
+                border: 2px solid #000000;
+            }
+        </style>
+
+        <script src="game.js"></script>
+    </body>
+</html>

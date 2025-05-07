@@ -1,0 +1,4 @@
+Was ist ein Zellulärer automat?
+Was ist das Game of Life
+Programmerklärung
+Vorführung
